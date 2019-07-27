@@ -11,12 +11,14 @@ class ProfileController extends Controller
     public function add(){
         return view("admin.profile.create");
     }
+    #add actionはweb.phpからProfileController@addと呼び出し、resources/viewsのadmin/profile/create.blade.phpを表示させる
     public function create(){
         return redirect("admin/profile/create");
     }
     public function edit(){
         return view("admin.profile.edit");
     }
+    #edit actionはweb.phpからProfileController@editと呼び出し、resources/viewsのadmin/profile/edit.blade.phpを表示させる
     public function update(){
         return redirect("admin/profile/edit");
     }
