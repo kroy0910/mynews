@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    User::create([
+        'name' => "kameda";
+        'email' => "kameda.roy@gmail.com",
+        'password' => Hash::make("pass"),
+        ]);
 }
