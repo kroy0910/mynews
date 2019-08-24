@@ -21,7 +21,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="name">氏名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                            <input type="text" class="form-control" name="name" value="{{ 'name') }}">
                         </div>
                     </div>
                     <div class="form-group row">

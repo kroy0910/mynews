@@ -17,35 +17,47 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="name">氏名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" name="name" value="{{ $prof_form->name }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="gender">性別</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="gender">
+                            <input type="text" class="form-control" name="gender" value="{{ $prof_form->gender }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="hobby">趣味</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-controll" name="hobby">
+                            <input type="text" class="form-controll" name="hobby" value="{{ $prof_form->hobby }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="introduction">自己紹介欄</label>
                         <div class="col-md-10">
-                            <textarea class="form-controll" name="introduction" rows="20"></textarea>
+                            <textarea class="form-controll" name="introduction" rows="20">{{$prof_form->introduction}}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <input type="hidden" name="id">
+                            <input type="hidden" name="id" value="{{ $prof_form->id }}">
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
                     </div>
                 </form>
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($prof_form->prof_history != NULL)
+                                @foreach ($prof_form->prof_history as $history)
+                                    <li class="list-group-item">{{ $history->prof_edit_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
