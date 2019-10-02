@@ -37,6 +37,10 @@ Route::group(["prefix"=>"admin/profile"],function(){
     Route::post("edit","Admin\ProfileController@update")->middleware('auth');
 });
 
+Route::group(['prefix'=>'admin/gcp'], function(){
+    Route::get("imageup","Admin\GcpController@imageUp");
+    Route::post("imageanno","Admin\GcpController@imageAnno");
+});
 
 Auth::routes();
 
