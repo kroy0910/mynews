@@ -1,11 +1,19 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
+# 最初にterminalで下記コマンドを実行（環境変数のjsonファイルを設定）
+# export GOOGLE_APPLICATION_CREDENTIALS="vision_api_key.json"
+# terminalではなくphpのコード内で環境変数の変更
+putenv('GOOGLE_APPLICATION_CREDENTIALS=/home/ec2-user/environment/mynews/vision_api_key.json');
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\News;
 use App\History;
 use Carbon\Carbon;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+
 
 class NewsController extends Controller
 {
@@ -26,8 +34,21 @@ class NewsController extends Controller
       if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');
         $news->image_path = basename($path);
+        
+         //google vision api
+        $client = new ImageAnnotatorClient();
+        $response = $client->labelDetection($client->createImageObject(file_get_contents($request->image)));
+        
+        if(is_null($response->getError())) {
+            \Debugbar::info($response);
+            $annotations = $response->getLabelAnnotations();
+            \Debugbar::info($annotations);
+            $news->fill(['score'=>$annotations[0]->getScore(), 'anno_res'=>$annotations[0]->getDescription()]);
+        } else {
+            \Debugbar::info($response->getError());
+            }
       } else {
-          $news->image_path = null;
+        $news->image_path = null;
       }
 
       // フォームから送信されてきた_tokenを削除する
@@ -39,7 +60,7 @@ class NewsController extends Controller
       $news->fill($form);
       $news->save();//DBにセーブ//コントローラーでどこまで保存するかを書く必要はない（美しくない）
 
-      return redirect('admin/news/create');//指定しなければデフォルトget
+      return redirect('admin/news');//指定しなければデフォルトget
   }
   
   public function index(Request $request)

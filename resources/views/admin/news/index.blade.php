@@ -33,9 +33,11 @@
                     <table class="table table-dark">
                         <thead>
                             <tr>
-                                <th width="10%">ID</th>
+                                <th width="5%">ID</th>
                                 <th width="20%">タイトル</th>
-                                <th width="50%">本文</th>
+                                <th width="30%">本文</th>
+                                <th width="10%">解析結果</th>
+                                <th width="5%">適合率</th>
                                 <th width="10">操作</th>
                             </tr>
                         </thead>
@@ -45,6 +47,8 @@
                                     <th>{{ $news->id }}</th>
                                     <td>{{ str_limit($news->title, 100) }}</td>
                                     <td>{{ str_limit($news->body, 250) }}</td>
+                                    <td>{{ str_limit($news->anno_res, 100) }}</td>
+                                    <td>{{ str_limit($news->score,100) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">編集</a>

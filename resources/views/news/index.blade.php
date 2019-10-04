@@ -20,7 +20,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-mt-3">
+                            <p class="body mx-auto">解析結果：{{ str_limit($headline->anno_res, 100) }}</p>
+                            <p class="body mx-auto">適合率：{{ str_limit($headline->score, 100) }}</p>
                             <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                         </div>
                     </div>
@@ -39,6 +41,18 @@
                                 </div>
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    <p>
+                                        解析結果：
+                                        {{ str_limit($post->anno_res, 100) }}
+                                    </p>
+                                </div>
+                                <div class="body mt-3">
+                                    <p>
+                                        適合率：
+                                        {{ str_limit($post->score, 100) }}
+                                    </p>
                                 </div>
                                 <div class="body mt-3">
                                     {{ str_limit($post->body, 1500) }}
