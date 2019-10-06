@@ -1,12 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "skilled-mile-251610",
-  "private_key_id": "c06eb5f0126590b27475cf6f4812066cf23b8b75",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9kLFILSEmb0Dt\nTOFZney1zngzhzLhIYPtdYT6bhNi3LGoIxrdtdqBG3RHjNTVDchlklBDYMOVkjFY\nooI+2viet8Qpr7ynf9aYuBsM+4WmpsiGFoY/g6wVhhN6ynutvP6CS09c+5M01dMU\nlYh9eyMVGK49dXzbTTnjUx4cG6uUzUH9V6CtHVXiWx1W39grBa7NySlLoStMI636\n9+Ro7Z3Lah5JmuxRhnucKIU2QDvugmLMkxuRJzYGihs/SPq2p1nQCxELhSWzlxYw\nOrTvjAheseK4dEQvikJ5e55RHADJwr2LZOh6XZz37XK00p0kJ3Z/caprYrPFYlLN\nkdUt7f3DAgMBAAECggEAKbH8vIJoqzqHTmq9mmeZHDgoyjSvpUMo8H8L28WAcBtY\n3EG0dBW+1O0D+4Tnf2FDtcuj6d4Lxwdb4UIFYevqCYckF4M2/KSqv/amxIlCUXCX\n5J5psui0Xhuah0SoRYOve1szPqF7NIDfp8RoPClsgwRlttDzwIzQ8cZjdg1EBTtr\nd7hif+6jCxqELxyFZ73ZtmQgNfYotEqOwS1Iri98Ly4jgeXwSFVsrqiU3S2VlKc/\nOnqGyA4hmKxUlk45lufn2/wvaIG1ZqGIS4nR3qZOaqmShlQpXQer3xnGOg+3jfKQ\n4YqAIJblTDOL7oBCegcb9GXYQH22pMhYheEBDVkxwQKBgQDppByr78VAIPPU4Pmj\nF4K/lU/htfYCnclLrm7zUg45wQf8zAb9AeCchHgP6lMrLJYD/GS1MbZVIw4kCoP4\nKtcBpx7o4b4Anvn1g0GC8fK0CJBi74z044HmtuwB3l7I5nI6xmVk6PHfl2HyemQo\njuXOpOlGuNgTHIf9fbfjO7ErIQKBgQDPtMgxD/CnxuGRfklv312dOMLBv8l63O5V\n8Xb0Qoos2cU7r1BN5GekhV2sRAz7sNeKc990jVmn0FLCbpjcu/xoyNOEjWxTVmCo\nmpu4j+WRn9B10tYo5eX++MlOIfiPEv77I9f4TFY8OtzM7gKIXJyZ696QTYJ0tt14\noZH3zPBQYwKBgC0sJLr9dbaraFlNUha9UfM2rCYopzLkTOoMBLmYsNVrw96Vl/hM\n5597YTc6h+/+A9crclEyFl2plG9VdSSDK+TO6gP+uVynYA6e3QizPMigK0JlrGwg\nnJn93e2Sj+Lp40YH28zB2Rnwy+g0z66jyjzE17FrxaMUThqttuMBRIThAoGBAI78\naQQ9cPJPG2HJikyVfCCLvqcanF0UUo6fl8A3Pl/52qln2uSEZEUB+qZogneSGg+a\nDS5zUFESPKbU9C6gyvZnqhUKNpR4Vjo7lQ/NH8DMP/mclwm4mkiYhBxhjncQILBK\n0JaCFquH6hC5mMy+1J+xnJnCghhO+s/cilwInTb5AoGBAJvXAJ8CPcpKPN2P6dQo\nV0woBp018RvbPgXGrzg0tlGGUhfCz1zwVBptIopE1nz+1USQCnHorzjOZTVvULyj\nMb7UOli9bk1m77pFi8ufHTcT9DJKzkdXc4TzrQ2IL3RlSUi7lBLPwD21viKIengi\nv2trNnEKSANZYyEggIkUQpCE\n-----END PRIVATE KEY-----\n",
-  "client_email": "mynews-gcp@skilled-mile-251610.iam.gserviceaccount.com",
-  "client_id": "112480996802354961516",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mynews-gcp%40skilled-mile-251610.iam.gserviceaccount.com"
-}
+
